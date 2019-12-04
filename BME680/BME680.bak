@@ -1,16 +1,16 @@
 EESchema Schematic File Version 4
-LIBS:BME280-cache
+LIBS:BME680-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5906
 encoding utf-8
 Sheet 1 1
-Title "BME280 Breakout with 5V Level Shift"
+Title "BME680 Breakout with 5V Level Shift"
 Date "2019-11-04"
 Rev "1"
 Comp "SirBoard"
-Comment1 "Temperature, Pressure and Humidity Sensor"
-Comment2 "BME280"
+Comment1 "Temperature, Pressure, Humidity AND VOC Sensor"
+Comment2 "BME680"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -470,17 +470,6 @@ F 3 "~" H 2900 3250 50  0001 C CNN
 	1    2900 3250
 	1    0    0    -1  
 $EndComp
-$Comp
-L Sensor:BME280 U2
-U 1 1 5DEB7D0F
-P 4950 3050
-F 0 "U2" H 4520 3095 50  0000 R CNN
-F 1 "BME280" H 4520 3005 50  0000 R CNN
-F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 4950 2850 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 4950 2850 50  0001 C CNN
-	1    4950 3050
-	1    0    0    -1  
-$EndComp
 Connection ~ 4950 2450
 Wire Wire Line
 	4950 2450 4850 2450
@@ -524,6 +513,17 @@ F 1 "GND" H 4954 3628 50  0000 C CNN
 F 2 "" H 4950 3800 50  0001 C CNN
 F 3 "" H 4950 3800 50  0001 C CNN
 	1    4950 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor:BME680 U2
+U 1 1 5DF3F45C
+P 4950 3050
+F 0 "U2" H 4520 3095 50  0000 R CNN
+F 1 "BME680" H 4520 3005 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_3x3mm_P0.8mm_ClockwisePinNumbering" H 4950 2850 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME680-DS001-00.pdf" H 4950 2850 50  0001 C CNN
+	1    4950 3050
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

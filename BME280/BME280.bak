@@ -1,15 +1,16 @@
 EESchema Schematic File Version 4
+LIBS:BME280-cache
 EELAYER 29 0
 EELAYER END
 $Descr User 7874 5906
 encoding utf-8
 Sheet 1 1
-Title "BMP280 Breakout with 5V Level Shift"
+Title "BME280 Breakout with 5V Level Shift"
 Date "2019-11-04"
 Rev "1"
 Comp "SirBoard"
-Comment1 "BMP280"
-Comment2 ""
+Comment1 "Temperature, Pressure and Humidity Sensor"
+Comment2 "BME280"
 Comment3 ""
 Comment4 ""
 $EndDescr
@@ -102,34 +103,12 @@ Wire Wire Line
 	6600 1300 6600 1400
 Wire Wire Line
 	6600 1800 6600 1700
-$Comp
-L power:GND #PWR0106
-U 1 1 5DCCDF08
-P 5650 3500
-F 0 "#PWR0106" H 5650 3250 50  0001 C CNN
-F 1 "GND" H 5654 3328 50  0000 C CNN
-F 2 "" H 5650 3500 50  0001 C CNN
-F 3 "" H 5650 3500 50  0001 C CNN
-	1    5650 3500
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	6600 900  6600 1000
-Text GLabel 5800 2500 2    50   Input ~ 0
+Text GLabel 5100 2300 2    50   Input ~ 0
 3V3
 Text GLabel 1150 950  0    50   Input ~ 0
 5V
-$Comp
-L Sensor_Pressure:BMP280 U2
-U 1 1 5DC20258
-P 5600 3050
-F 0 "U2" H 5830 3145 50  0000 L CNN
-F 1 "BMP280" H 5830 3055 50  0000 L CNN
-F 2 "Package_LGA:Bosch_LGA-8_2x2.5mm_P0.65mm_ClockwisePinNumbering" H 5600 2350 50  0001 C CNN
-F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BMP280-DS001-19.pdf" H 5600 3050 50  0001 C CNN
-	1    5600 3050
-	1    0    0    -1  
-$EndComp
 Connection ~ 6600 900 
 Wire Wire Line
 	6600 900  6200 900 
@@ -175,22 +154,6 @@ F 3 "https://www.diodes.com/assets/Datasheets/AP2127.pdf" H 5600 1100 50  0001 C
 $EndComp
 Wire Wire Line
 	5600 1300 5600 1800
-Text GLabel 4950 2850 0    50   Input ~ 0
-SCK_3V3
-Text GLabel 4950 2950 0    50   Input ~ 0
-SDI_3V3
-Text GLabel 4950 3050 0    50   Input ~ 0
-SDO_3V3
-Text GLabel 4950 3150 0    50   Input ~ 0
-CSB_3V3
-Wire Wire Line
-	5200 2950 4950 2950
-Wire Wire Line
-	4950 2850 5200 2850
-Wire Wire Line
-	4950 3050 5200 3050
-Wire Wire Line
-	5200 3150 4950 3150
 $Comp
 L Device:R_US R7
 U 1 1 5DC971F7
@@ -450,79 +413,117 @@ Wire Wire Line
 Wire Wire Line
 	2350 1550 2450 1550
 Wire Wire Line
-	5600 3350 5600 3450
-Wire Wire Line
-	5600 3450 5650 3450
-Wire Wire Line
-	5700 3450 5700 3350
-Wire Wire Line
-	5650 3500 5650 3450
-Connection ~ 5650 3450
-Wire Wire Line
-	5650 3450 5700 3450
-Wire Wire Line
-	5800 2500 5650 2500
-Wire Wire Line
-	5650 2500 5650 2650
-Wire Wire Line
-	5650 2650 5700 2650
-Wire Wire Line
-	5650 2650 5600 2650
-Connection ~ 5650 2650
-Text GLabel 6750 2700 0    50   Input ~ 0
+	5100 2300 4950 2300
+Text GLabel 1900 2950 0    50   Input ~ 0
 SCK_5V
-Text GLabel 6750 2800 0    50   Input ~ 0
+Text GLabel 1900 3050 0    50   Input ~ 0
 SDI_5V
-Text GLabel 6750 2900 0    50   Input ~ 0
+Text GLabel 1900 3150 0    50   Input ~ 0
 CSB_5V
-Text GLabel 6750 3000 0    50   Input ~ 0
+Text GLabel 1900 3250 0    50   Input ~ 0
 SDO_5V
 $Comp
 L power:GND #PWR0102
 U 1 1 5DDD5DF8
-P 6750 3300
-F 0 "#PWR0102" H 6750 3050 50  0001 C CNN
-F 1 "GND" H 6754 3128 50  0000 C CNN
-F 2 "" H 6750 3300 50  0001 C CNN
-F 3 "" H 6750 3300 50  0001 C CNN
-	1    6750 3300
+P 1900 3550
+F 0 "#PWR0102" H 1900 3300 50  0001 C CNN
+F 1 "GND" H 1904 3378 50  0000 C CNN
+F 2 "" H 1900 3550 50  0001 C CNN
+F 3 "" H 1900 3550 50  0001 C CNN
+	1    1900 3550
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x07 J1
 U 1 1 5DE36C22
-P 6950 3000
-F 0 "J1" H 7029 3042 50  0000 L CNN
-F 1 "Conn_01x07" H 7029 2952 50  0000 L CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 6950 3000 50  0001 C CNN
-F 3 "~" H 6950 3000 50  0001 C CNN
-	1    6950 3000
+P 2100 3250
+F 0 "J1" H 2179 3292 50  0000 L CNN
+F 1 "Conn_01x07" H 2179 3202 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 2100 3250 50  0001 C CNN
+F 3 "~" H 2100 3250 50  0001 C CNN
+	1    2100 3250
 	1    0    0    -1  
 $EndComp
-Text GLabel 6750 3200 0    50   Input ~ 0
+Text GLabel 1900 3450 0    50   Input ~ 0
 3V3
-Text GLabel 6750 3100 0    50   Input ~ 0
+Text GLabel 1900 3350 0    50   Input ~ 0
 5V
 $Comp
 L Mechanical:MountingHole H4
 U 1 1 5DB4A072
-P 3600 3100
-F 0 "H4" H 3700 3145 50  0000 L CNN
-F 1 "MountingHole" H 3700 3055 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 3600 3100 50  0001 C CNN
-F 3 "~" H 3600 3100 50  0001 C CNN
-	1    3600 3100
+P 3650 3250
+F 0 "H4" H 3750 3295 50  0000 L CNN
+F 1 "MountingHole" H 3750 3205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 3650 3250 50  0001 C CNN
+F 3 "~" H 3650 3250 50  0001 C CNN
+	1    3650 3250
 	1    0    0    -1  
 $EndComp
 $Comp
 L Mechanical:MountingHole H3
 U 1 1 5DB4A06C
-P 2850 3100
-F 0 "H3" H 2950 3145 50  0000 L CNN
-F 1 "MountingHole" H 2950 3055 50  0000 L CNN
-F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2850 3100 50  0001 C CNN
-F 3 "~" H 2850 3100 50  0001 C CNN
-	1    2850 3100
+P 2900 3250
+F 0 "H3" H 3000 3295 50  0000 L CNN
+F 1 "MountingHole" H 3000 3205 50  0000 L CNN
+F 2 "MountingHole:MountingHole_2.7mm_M2.5_ISO14580_Pad" H 2900 3250 50  0001 C CNN
+F 3 "~" H 2900 3250 50  0001 C CNN
+	1    2900 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Sensor:BME280 U2
+U 1 1 5DEB7D0F
+P 4950 3050
+F 0 "U2" H 4520 3095 50  0000 R CNN
+F 1 "BME280" H 4520 3005 50  0000 R CNN
+F 2 "Package_LGA:Bosch_LGA-8_2.5x2.5mm_P0.65mm_ClockwisePinNumbering" H 4950 2850 50  0001 C CNN
+F 3 "https://ae-bst.resource.bosch.com/media/_tech/media/datasheets/BST-BME280_DS001-11.pdf" H 4950 2850 50  0001 C CNN
+	1    4950 3050
+	1    0    0    -1  
+$EndComp
+Connection ~ 4950 2450
+Wire Wire Line
+	4950 2450 4850 2450
+Wire Wire Line
+	4950 2450 5050 2450
+Wire Wire Line
+	4950 2300 4950 2450
+Wire Wire Line
+	4950 3750 5050 3750
+Connection ~ 4950 3750
+Wire Wire Line
+	4950 3800 4950 3750
+Wire Wire Line
+	5050 3750 5050 3650
+Wire Wire Line
+	4850 3750 4950 3750
+Wire Wire Line
+	4850 3650 4850 3750
+Wire Wire Line
+	5550 3350 5800 3350
+Wire Wire Line
+	5800 2750 5550 2750
+Wire Wire Line
+	5800 2950 5550 2950
+Wire Wire Line
+	5550 3150 5800 3150
+Text GLabel 5800 3350 2    50   Input ~ 0
+CSB_3V3
+Text GLabel 5800 2750 2    50   Input ~ 0
+SDO_3V3
+Text GLabel 5800 3150 2    50   Input ~ 0
+SDI_3V3
+Text GLabel 5800 2950 2    50   Input ~ 0
+SCK_3V3
+$Comp
+L power:GND #PWR0106
+U 1 1 5DCCDF08
+P 4950 3800
+F 0 "#PWR0106" H 4950 3550 50  0001 C CNN
+F 1 "GND" H 4954 3628 50  0000 C CNN
+F 2 "" H 4950 3800 50  0001 C CNN
+F 3 "" H 4950 3800 50  0001 C CNN
+	1    4950 3800
 	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
