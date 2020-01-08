@@ -179,9 +179,9 @@ Wire Wire Line
 	1725 1375 1725 1625
 Connection ~ 975  1375
 Connection ~ 1725 1625
-Text GLabel 1425 2275 0    50   Input ~ 0
+Text GLabel 3900 2275 0    50   Input ~ 0
 SCL_3V3
-Text GLabel 2225 2275 0    50   Input ~ 0
+Text GLabel 3100 2275 0    50   Input ~ 0
 SDA_3V3
 Wire Wire Line
 	2275 2025 2275 2275
@@ -193,9 +193,9 @@ Wire Wire Line
 Wire Wire Line
 	1475 2275 1425 2275
 Connection ~ 1475 2025
-Text GLabel 1575 1225 2    50   Input ~ 0
+Text GLabel 4050 1225 2    50   Input ~ 0
 SCL_5V
-Text GLabel 2375 1225 2    50   Input ~ 0
+Text GLabel 3250 1225 2    50   Input ~ 0
 SDA_5V
 Connection ~ 2275 1225
 Wire Wire Line
@@ -582,9 +582,9 @@ Wire Wire Line
 	3400 1375 3400 1625
 Connection ~ 2650 1375
 Connection ~ 3400 1625
-Text GLabel 3100 2275 0    50   Input ~ 0
+Text GLabel 2225 2275 0    50   Input ~ 0
 MISO_3V3
-Text GLabel 3900 2275 0    50   Input ~ 0
+Text GLabel 1425 2275 0    50   Input ~ 0
 CS_3V3
 Wire Wire Line
 	3950 2025 3950 2275
@@ -596,9 +596,9 @@ Wire Wire Line
 Wire Wire Line
 	3150 2275 3100 2275
 Connection ~ 3150 2025
-Text GLabel 3250 1225 2    50   Input ~ 0
+Text GLabel 2375 1225 2    50   Input ~ 0
 MISO_5V
-Text GLabel 4050 1225 2    50   Input ~ 0
+Text GLabel 1575 1225 2    50   Input ~ 0
 CS_5V
 Connection ~ 3950 1225
 Wire Wire Line
