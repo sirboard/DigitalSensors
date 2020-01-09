@@ -5,14 +5,14 @@ EELAYER END
 $Descr User 7874 5906
 encoding utf-8
 Sheet 1 1
-Title "MMA8451 Breakout with 5V Level Shift"
+Title "MMA845X Breakout with 5V Level Shift"
 Date "2019-12-20"
 Rev "1"
 Comp "SirBoard"
-Comment1 "Digital 8bit/14 bit I2C Accelerometer"
+Comment1 "Digital 8bit/10Bit,12Bit or 14Bit bit I2C Accelerometer"
 Comment2 "1.56Hz - 800Hz Data Rate"
 Comment3 "±2g, ±4g, ±8g"
-Comment4 "MMA8451 "
+Comment4 "MMA8451, MMA8452, MMA8453"
 $EndDescr
 Wire Wire Line
 	3325 1525 3325 1725
@@ -289,7 +289,7 @@ L SirBoard_Library:MMA8451 U2
 U 1 1 5DFEF2B9
 P 5650 2900
 F 0 "U2" H 5650 3488 50  0000 C CNN
-F 1 "MMA8451" H 5650 3398 50  0000 C CNN
+F 1 "MMA845X" H 5650 3398 50  0000 C CNN
 F 2 "SirBoardLibrary:QFN-COL-16-P=0.5" H 5650 3450 50  0001 C CNN
 F 3 "" H 5650 3450 50  0001 C CNN
 F 4 "C118083" H 5650 3375 50  0001 C CNN "Part"
