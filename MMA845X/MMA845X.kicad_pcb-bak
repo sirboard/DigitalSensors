@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 31)
+    (drawings 37)
     (tracks 99)
     (zones 0)
     (modules 20)
@@ -11,14 +11,14 @@
 
   (page User 132.004 102.006)
   (title_block
-    (title "MMA8451 Breakout with 5V Level Shift")
+    (title "MMA845X Breakout with 5V Level Shift")
     (date 2019-12-20)
     (rev 1)
     (company SirBoard)
-    (comment 1 "Digital 8bit/14bit I2C Accelerometer")
+    (comment 1 "Digital 8bit/12Bit or 14bit I2C Accelerometer")
     (comment 2 "1.56Hz - 800Hz Data Rates")
     (comment 3 "±2g, ±4g, ±8g")
-    (comment 4 MMA8451)
+    (comment 4 "MMA8451, MMA8452")
   )
 
   (layers
@@ -45,7 +45,7 @@
   )
 
   (setup
-    (last_trace_width 0.3)
+    (last_trace_width 0.127)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
@@ -238,7 +238,7 @@
     (tags "QFN DFN_QFN")
     (path /5DFEF2B9)
     (attr smd)
-    (fp_text reference U2 (at 0 0) (layer F.SilkS)
+    (fp_text reference U2 (at 0 0) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value MMA8451 (at 0 2.8) (layer F.Fab)
@@ -1278,13 +1278,19 @@
     )
   )
 
+  (gr_line (start 66.294 39.116) (end 66.294 42.418) (layer B.SilkS) (width 0.12))
+  (gr_line (start 60.452 40.767) (end 67.945 40.767) (layer B.SilkS) (width 0.12))
+  (gr_line (start 60.452 42.418) (end 60.452 39.116) (layer B.SilkS) (width 0.12) (tstamp 5DFD93A1))
+  (gr_line (start 67.945 42.418) (end 60.452 42.418) (layer B.SilkS) (width 0.12))
+  (gr_line (start 67.945 39.116) (end 67.945 42.418) (layer B.SilkS) (width 0.12))
+  (gr_line (start 60.452 39.116) (end 67.945 39.116) (layer B.SilkS) (width 0.12))
   (gr_text I2 (at 69.977 36.957 270) (layer F.SilkS) (tstamp 5DFD7E96)
     (effects (font (size 0.8 0.8) (thickness 0.13)))
   )
-  (gr_text "±2g, ±4g,\n±8g 14Bit" (at 64.389 40.767) (layer B.SilkS)
+  (gr_text "12 Bit\n14 Bit" (at 63.246 40.767) (layer B.SilkS)
     (effects (font (size 0.9 0.9) (thickness 0.13)) (justify mirror))
   )
-  (gr_text MMA8451 (at 64.262 24.511) (layer B.SilkS) (tstamp 5DF1752B)
+  (gr_text MMA845X (at 64.262 24.511) (layer B.SilkS) (tstamp 5DF1752B)
     (effects (font (size 1 1) (thickness 0.14)) (justify mirror))
   )
   (gr_arc (start 57.658 25.527) (end 57.658 23.114) (angle -90) (layer Edge.Cuts) (width 0.05) (tstamp 5DF0DBBF))
@@ -1312,7 +1318,7 @@
   (gr_text X (at 64.135 40.005) (layer F.SilkS)
     (effects (font (size 0.9 0.9) (thickness 0.14)))
   )
-  (gr_text "MMA8451\n3-Axis\nAccelerometer" (at 64.262 25.908) (layer F.SilkS)
+  (gr_text "MMA845X\n3-Axis\nAccelerometer" (at 64.262 25.908) (layer F.SilkS)
     (effects (font (size 0.9 0.9) (thickness 0.13)))
   )
   (gr_text I2 (at 58.42 39.497 270) (layer F.SilkS) (tstamp 5DF1208F)
