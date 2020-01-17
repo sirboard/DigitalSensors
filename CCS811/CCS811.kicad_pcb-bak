@@ -11,14 +11,14 @@
 
   (page User 132.004 102.006)
   (title_block
-    (title "MMA845X Breakout with 5V Level Shift")
-    (date 2019-12-20)
+    (title "CCS811 Breakout with 5V Level Shift")
+    (date 2020-01-09)
     (rev 1)
     (company SirBoard)
-    (comment 1 "Digital 8bit/12Bit or 14bit I2C Accelerometer")
-    (comment 2 "1.56Hz - 800Hz Data Rates")
-    (comment 3 "±2g, ±4g, ±8g")
-    (comment 4 "MMA8451, MMA8452")
+    (comment 1 "TVOC Range = 0ppb - 64000ppb ")
+    (comment 2 "eCO2 Range = 400ppm - 64000ppm ")
+    (comment 3 "400kHz I2C")
+    (comment 4 "Digital eCO2 and VOC Sensor")
   )
 
   (layers
@@ -45,7 +45,7 @@
   )
 
   (setup
-    (last_trace_width 0.2)
+    (last_trace_width 0.127)
     (user_trace_width 0.2)
     (user_trace_width 0.25)
     (user_trace_width 0.3)
@@ -1840,7 +1840,6 @@
   (segment (start 65.659 40.894) (end 66.421 40.132) (width 0.2) (layer B.Cu) (net 2))
   (segment (start 60.706 39.497) (end 62.103 40.894) (width 0.2) (layer B.Cu) (net 2))
   (segment (start 62.103 40.894) (end 65.659 40.894) (width 0.2) (layer B.Cu) (net 2))
-  (segment (start 68.491 35.687) (end 68.542 35.687) (width 0.2) (layer F.Cu) (net 3))
   (via (at 66.967 37.211) (size 0.6) (drill 0.3) (layers F.Cu B.Cu) (net 2))
   (segment (start 66.421 40.132) (end 66.421 37.757) (width 0.25) (layer B.Cu) (net 2))
   (segment (start 66.421 37.757) (end 66.967 37.211) (width 0.25) (layer B.Cu) (net 2))
@@ -1864,6 +1863,7 @@
   (segment (start 58.928 35.052) (end 59.766 35.052) (width 0.3) (layer F.Cu) (net 2))
   (segment (start 58.547 35.8775) (end 58.547 35.433) (width 0.3) (layer F.Cu) (net 2))
   (segment (start 58.547 35.433) (end 58.928 35.052) (width 0.3) (layer F.Cu) (net 2))
+  (segment (start 68.491 35.687) (end 68.542 35.687) (width 0.2) (layer F.Cu) (net 3))
   (segment (start 60.6805 41.589) (end 60.9945 41.275) (width 0.2) (layer F.Cu) (net 3))
   (segment (start 60.6805 42.164) (end 60.6805 41.589) (width 0.2) (layer F.Cu) (net 3))
   (segment (start 63.72 40.325) (end 63.77 40.325) (width 0.2) (layer F.Cu) (net 3))
